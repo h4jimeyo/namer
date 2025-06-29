@@ -268,7 +268,7 @@ def add_extra_artifacts(video_file: Path, new_metadata: LookedUpFileInfo, search
         trailer = get_trailer(new_metadata.trailer_url, video_file, config)
 
     if new_metadata:
-        poster = get_image(new_metadata.poster_url, '-poster', video_file, config) if new_metadata.poster_url and config.enabled_poster and ImageDownloadType.POSTER in config.download_type else None
+        poster = get_image(new_metadata.poster_url, '', video_file, config) if new_metadata.poster_url and config.enabled_poster and ImageDownloadType.POSTER in config.download_type else None
         background = get_image(new_metadata.background_url, '-fanart', video_file, config) if new_metadata.background_url and config.enabled_poster and ImageDownloadType.BACKGROUND in config.download_type else None
         for performer in new_metadata.performers:
             if isinstance(performer.image, str):
