@@ -243,7 +243,7 @@ def process_file(command: Command) -> Optional[Command]:
                     log_file.unlink()
 
                 target = move_to_final_location(command, new_metadata)
-                tag_in_place(target.target_movie_file, command.config, new_metadata, ffprobe_results)
+                tag_in_place(target.target_movie_file, command.config, new_metadata)
                 add_extra_artifacts(target.target_movie_file, new_metadata, search_results, phash, command.config)
                 send_webhook_notification(target.target_movie_file, command.config)
                 logger.success('Done processing file: {}, moved to {}', command.target_movie_file, target.target_movie_file)
