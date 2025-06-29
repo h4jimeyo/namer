@@ -77,6 +77,7 @@ class UnitTestAsTheDefaultExecution(unittest.TestCase):
   <art>
     <poster>{fake_tpdb.get_url()}qWAUIAUpBsoqKUwozc4NOTR1tPI=/1000x1500/smart/filters:sharpen():upscale():watermark(https%3A%2F%2Fcdn.metadataapi.net%2Fsites%2F3f%2F9f%2F51%2Fcf3828d65425bca2890d53ef242d8cf%2Flogo%2Fevil-angel_dark%5B1%5D.png,-10,-10,25,50)/https%3A%2F%2Fcdn.metadataapi.net%2Fscene%2Ff4%2Fab%2F3e%2Fa91d31d6dee223f4f30a57bfd83b151%2Fbackground%2Fbg-evil-angel-carmela-clutch-fabulous-anal-3-way.webp</poster>
     <background>{fake_tpdb.get_url()}gAu-1j1ZP4f6gNMPibgAyGKoa_c=/fit-in/3000x3000/smart/filters:sharpen():upscale()/https%3A%2F%2Fcdn.metadataapi.net%2Fscene%2Ff4%2Fab%2F3e%2Fa91d31d6dee223f4f30a57bfd83b151%2Fbackground%2Fbg-evil-angel-carmela-clutch-fabulous-anal-3-way.webp</background>
+    <fanart>{fake_tpdb.get_url()}gAu-1j1ZP4f6gNMPibgAyGKoa_c=/fit-in/3000x3000/smart/filters:sharpen():upscale()/https%3A%2F%2Fcdn.metadataapi.net%2Fscene%2Ff4%2Fab%2F3e%2Fa91d31d6dee223f4f30a57bfd83b151%2Fbackground%2Fbg-evil-angel-carmela-clutch-fabulous-anal-3-way.webp</fanart>
   </art>
   <genre>Anal</genre>
   <genre>Ass</genre>
@@ -113,7 +114,7 @@ class UnitTestAsTheDefaultExecution(unittest.TestCase):
     <alias>Carmela Clutch</alias>
     <role>Female</role>
     <image>{fake_tpdb.get_url()}flLf1pecTlKcpJCki30l5iWXNdQ=/1000x1500/smart/filters:sharpen():upscale()/https%3A%2F%2Fcdn.metadataapi.net%2Fperformer%2Fd3%2F47%2Fcd%2Fde8cbe2fd9f73dec8c985d2d69b67ac%2Fposter%2Fcarmela-clutch.webp</image>
-    <thumb/>
+    <thumb>{fake_tpdb.get_url()}flLf1pecTlKcpJCki30l5iWXNdQ=/1000x1500/smart/filters:sharpen():upscale()/https%3A%2F%2Fcdn.metadataapi.net%2Fperformer%2Fd3%2F47%2Fcd%2Fde8cbe2fd9f73dec8c985d2d69b67ac%2Fposter%2Fcarmela-clutch.webp</thumb>
   </actor>
   <actor>
     <type>Actor</type>
@@ -121,7 +122,7 @@ class UnitTestAsTheDefaultExecution(unittest.TestCase):
     <alias>Francesca Le</alias>
     <role>Female</role>
     <image>{fake_tpdb.get_url()}r8g92zymZ6SduikMTwcXMojRxik=/1000x1500/smart/filters:sharpen():upscale()/https%3A%2F%2Fcdn.metadataapi.net%2Fperformer%2F71%2F51%2Fdc%2F4b09a05007ba30c041e474c2b398a51%2Fposter%2Ffrancesca-le.png</image>
-    <thumb/>
+    <thumb>{fake_tpdb.get_url()}r8g92zymZ6SduikMTwcXMojRxik=/1000x1500/smart/filters:sharpen():upscale()/https%3A%2F%2Fcdn.metadataapi.net%2Fperformer%2F71%2F51%2Fdc%2F4b09a05007ba30c041e474c2b398a51%2Fposter%2Ffrancesca-le.png</thumb>
   </actor>
   <actor>
     <type>Actor</type>
@@ -129,7 +130,7 @@ class UnitTestAsTheDefaultExecution(unittest.TestCase):
     <alias>Mark Wood</alias>
     <role>Male</role>
     <image>{fake_tpdb.get_url()}V7F3bvj0YDEr3_qrKqyaJ5fKxd0=/1000x1500/smart/filters:sharpen():upscale()/https%3A%2F%2Fcdn.metadataapi.net%2Fperformer%2Fa3%2F48%2Fcd%2Ffcd5cd6cecf1f7ae3af587286e9fccf%2Fposter%2Fmark-wood.webp</image>
-    <thumb/>
+    <thumb>{fake_tpdb.get_url()}V7F3bvj0YDEr3_qrKqyaJ5fKxd0=/1000x1500/smart/filters:sharpen():upscale()/https%3A%2F%2Fcdn.metadataapi.net%2Fperformer%2Fa3%2F48%2Fcd%2Ffcd5cd6cecf1f7ae3af587286e9fccf%2Fposter%2Fmark-wood.webp</thumb>
   </actor>
   <fileinfo/>
 </movie>
@@ -160,6 +161,7 @@ class UnitTestAsTheDefaultExecution(unittest.TestCase):
   <art>
     <poster>{fake_tpdb.get_url()}qWAUIAUpBsoqKUwozc4NOTR1tPI=/1000x1500/smart/filters:sharpen():upscale():watermark(https%3A%2F%2Fcdn.metadataapi.net%2Fsites%2F3f%2F9f%2F51%2Fcf3828d65425bca2890d53ef242d8cf%2Flogo%2Fevil-angel_dark%5B1%5D.png,-10,-10,25,50)/https%3A%2F%2Fcdn.metadataapi.net%2Fscene%2Ff4%2Fab%2F3e%2Fa91d31d6dee223f4f30a57bfd83b151%2Fbackground%2Fbg-evil-angel-carmela-clutch-fabulous-anal-3-way.webp</poster>
     <background>{fake_tpdb.get_url()}gAu-1j1ZP4f6gNMPibgAyGKoa_c=/fit-in/3000x3000/smart/filters:sharpen():upscale()/https%3A%2F%2Fcdn.metadataapi.net%2Fscene%2Ff4%2Fab%2F3e%2Fa91d31d6dee223f4f30a57bfd83b151%2Fbackground%2Fbg-evil-angel-carmela-clutch-fabulous-anal-3-way.webp</background>
+    <fanart>{fake_tpdb.get_url()}gAu-1j1ZP4f6gNMPibgAyGKoa_c=/fit-in/3000x3000/smart/filters:sharpen():upscale()/https%3A%2F%2Fcdn.metadataapi.net%2Fscene%2Ff4%2Fab%2F3e%2Fa91d31d6dee223f4f30a57bfd83b151%2Fbackground%2Fbg-evil-angel-carmela-clutch-fabulous-anal-3-way.webp</fanart>
   </art>
   <tag>Anal</tag>
   <tag>Ass</tag>
@@ -197,7 +199,7 @@ class UnitTestAsTheDefaultExecution(unittest.TestCase):
     <alias>Carmela Clutch</alias>
     <role>Female</role>
     <image>{fake_tpdb.get_url()}flLf1pecTlKcpJCki30l5iWXNdQ=/1000x1500/smart/filters:sharpen():upscale()/https%3A%2F%2Fcdn.metadataapi.net%2Fperformer%2Fd3%2F47%2Fcd%2Fde8cbe2fd9f73dec8c985d2d69b67ac%2Fposter%2Fcarmela-clutch.webp</image>
-    <thumb/>
+    <thumb>{fake_tpdb.get_url()}flLf1pecTlKcpJCki30l5iWXNdQ=/1000x1500/smart/filters:sharpen():upscale()/https%3A%2F%2Fcdn.metadataapi.net%2Fperformer%2Fd3%2F47%2Fcd%2Fde8cbe2fd9f73dec8c985d2d69b67ac%2Fposter%2Fcarmela-clutch.webp</thumb>
   </actor>
   <actor>
     <type>Actor</type>
@@ -205,7 +207,7 @@ class UnitTestAsTheDefaultExecution(unittest.TestCase):
     <alias>Francesca Le</alias>
     <role>Female</role>
     <image>{fake_tpdb.get_url()}r8g92zymZ6SduikMTwcXMojRxik=/1000x1500/smart/filters:sharpen():upscale()/https%3A%2F%2Fcdn.metadataapi.net%2Fperformer%2F71%2F51%2Fdc%2F4b09a05007ba30c041e474c2b398a51%2Fposter%2Ffrancesca-le.png</image>
-    <thumb/>
+    <thumb>{fake_tpdb.get_url()}r8g92zymZ6SduikMTwcXMojRxik=/1000x1500/smart/filters:sharpen():upscale()/https%3A%2F%2Fcdn.metadataapi.net%2Fperformer%2F71%2F51%2Fdc%2F4b09a05007ba30c041e474c2b398a51%2Fposter%2Ffrancesca-le.png</thumb>
   </actor>
   <actor>
     <type>Actor</type>
@@ -213,7 +215,7 @@ class UnitTestAsTheDefaultExecution(unittest.TestCase):
     <alias>Mark Wood</alias>
     <role>Male</role>
     <image>{fake_tpdb.get_url()}V7F3bvj0YDEr3_qrKqyaJ5fKxd0=/1000x1500/smart/filters:sharpen():upscale()/https%3A%2F%2Fcdn.metadataapi.net%2Fperformer%2Fa3%2F48%2Fcd%2Ffcd5cd6cecf1f7ae3af587286e9fccf%2Fposter%2Fmark-wood.webp</image>
-    <thumb/>
+    <thumb>{fake_tpdb.get_url()}V7F3bvj0YDEr3_qrKqyaJ5fKxd0=/1000x1500/smart/filters:sharpen():upscale()/https%3A%2F%2Fcdn.metadataapi.net%2Fperformer%2Fa3%2F48%2Fcd%2Ffcd5cd6cecf1f7ae3af587286e9fccf%2Fposter%2Fmark-wood.webp</thumb>
   </actor>
   <fileinfo/>
 </movie>
