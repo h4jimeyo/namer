@@ -167,10 +167,11 @@ def process_file(command: Command) -> Optional[Command]:
         # convert container type if requested.
         if command.config.convert_container_to and command.target_movie_file.suffix != command.config.convert_container_to:
             new_loc = command.target_movie_file.parent.joinpath(Path(command.target_movie_file.stem + '.' + command.config.convert_container_to))
-            if FFMpeg().convert(command.target_movie_file, new_loc):
-                command.target_movie_file = new_loc
-                if command.parsed_file:
-                    command.parsed_file.extension = command.config.convert_container_to
+            command.target_movie_file = new_loc
+            # if FFMpeg().convert(command.target_movie_file, new_loc):
+                # command.target_movie_file = new_loc
+                # if command.parsed_file:
+                    # command.parsed_file.extension = command.config.convert_container_to
         # Match to nfo files, if enabled and found.
         if command.write_from_nfos:
             new_metadata = get_local_metadata_if_requested(command.target_movie_file)
@@ -216,15 +217,15 @@ def process_file(command: Command) -> Optional[Command]:
                 if failed is not None and search_results is not None and failed.config.write_namer_failed_log:
                     write_log_file(failed.target_movie_file, search_results, failed.config)
             else:
-                ffprobe_results = command.config.ffmpeg.ffprobe(command.target_movie_file)
-                if ffprobe_results:
-                    new_metadata.resolution = ffprobe_results.get_resolution()
+                # ffprobe_results = command.config.ffmpeg.ffprobe(command.target_movie_file)
+                # if ffprobe_results:
+                #     new_metadata.resolution = ffprobe_results.get_resolution()
 
-                    video = ffprobe_results.get_default_video_stream()
-                    new_metadata.video_codec = video.codec_name if video else None
+                #     video = ffprobe_results.get_default_video_stream()
+                #     new_metadata.video_codec = video.codec_name if video else None
 
-                    audio = ffprobe_results.get_default_audio_stream()
-                    new_metadata.audio_codec = audio.codec_name if audio else None
+                #     audio = ffprobe_results.get_default_audio_stream()
+                #     new_metadata.audio_codec = audio.codec_name if audio else None
 
                 if command.config.send_phash:
                     phash = phash if phash else calculate_phash(command.target_movie_file, command.config)
@@ -267,8 +268,10 @@ def add_extra_artifacts(video_file: Path, new_metadata: LookedUpFileInfo, search
         trailer = get_trailer(new_metadata.trailer_url, video_file, config)
 
     if new_metadata:
-        poster = get_image(new_metadata.poster_url, '-poster', video_file, config) if new_metadata.poster_url and config.enabled_poster and ImageDownloadType.POSTER in config.download_type else None
-        background = get_image(new_metadata.background_url, '-background', video_file, config) if new_metadata.background_url and config.enabled_poster and ImageDownloadType.BACKGROUND in config.download_type else None
+        poster = None
+        background = None
+        # poster = get_image(new_metadata.poster_url, '-poster', video_file, config) if new_metadata.poster_url and config.enabled_poster and ImageDownloadType.POSTER in config.download_type else None
+        # background = get_image(new_metadata.background_url, '-background', video_file, config) if new_metadata.background_url and config.enabled_poster and ImageDownloadType.BACKGROUND in config.download_type else None
         for performer in new_metadata.performers:
             if isinstance(performer.image, str):
                 performer_image = get_image(performer.image, '-Performer-' + performer.name.replace(' ', '-') + '-image', video_file, config) if performer.image and config.enabled_poster and ImageDownloadType.PERFORMER in config.download_type else None
