@@ -52,9 +52,9 @@ class VideoPerceptualHash:
     def __calculate_phash(self, file: Path, duration: float, max_workers: Optional[int], use_gpu: bool) -> Optional[imagehash.ImageHash]:
         phash = None
 
-        thumbnail_image = self.__generate_image_thumbnail(file, duration, max_workers, use_gpu)
-        if thumbnail_image:
-            phash = imagehash.phash(thumbnail_image, hash_size=8, high_freq_factor=8, resample=Image.Resampling.BILINEAR)  # type: ignore
+        # thumbnail_image = self.__generate_image_thumbnail(file, duration, max_workers, use_gpu)
+        # if thumbnail_image:
+        #     phash = imagehash.phash(thumbnail_image, hash_size=8, high_freq_factor=8, resample=Image.Resampling.BILINEAR)  # type: ignore
 
         return phash
 

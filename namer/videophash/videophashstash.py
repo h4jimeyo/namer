@@ -1,14 +1,11 @@
 import platform
-import subprocess
 from functools import lru_cache
 from pathlib import Path
 from typing import Optional
 
-import orjson
 from loguru import logger
-from orjson import JSONDecodeError
 
-from namer.videophash import PerceptualHash, return_perceptual_hash
+from namer.videophash import PerceptualHash
 
 
 class StashVideoPerceptualHash:
@@ -54,37 +51,38 @@ class StashVideoPerceptualHash:
         return self.__execute_stash_phash(file)
 
     def __execute_stash_phash(self, file: Optional[Path] = None) -> Optional[PerceptualHash]:
-        output = None
-        if not self.__phash_path:
-            return output
+        return None
+        # output = None
+        # if not self.__phash_path:
+        #     return output
 
-        args = [
-            str(self.__phash_path / self.__phash_name),
-            '-json',
-        ]
+        # args = [
+        #     str(self.__phash_path / self.__phash_name),
+        #     '-json',
+        # ]
 
-        if file:
-            # fmt: off
-            args.extend([
-                '--video', str(file)
-            ])
+        # if file:
+        #     # fmt: off
+        #     args.extend([
+        #         '--video', str(file)
+        #     ])
 
-        with subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True) as process:
-            stdout, stderr = process.communicate()
-            stdout, stderr = stdout.strip(), stderr.strip()
+        # with subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True) as process:
+        #     stdout, stderr = process.communicate()
+        #     stdout, stderr = stdout.strip(), stderr.strip()
 
-            success = process.returncode == 0
-            if success:
-                data = None
-                try:
-                    data = orjson.loads(stdout)
-                except JSONDecodeError:
-                    logger.error(stdout)
-                    pass
+        #     success = process.returncode == 0
+        #     if success:
+        #         data = None
+        #         try:
+        #             data = orjson.loads(stdout)
+        #         except JSONDecodeError:
+        #             logger.error(stdout)
+        #             pass
 
-                if data:
-                    output = return_perceptual_hash(data['duration'], data['phash'], data['oshash'])
-            else:
-                logger.error(stderr)
+        #         if data:
+        #             output = return_perceptual_hash(data['duration'], data['phash'], data['oshash'])
+        #     else:
+        #         logger.error(stderr)
 
-        return output
+        # return output

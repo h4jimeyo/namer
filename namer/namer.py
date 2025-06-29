@@ -23,7 +23,6 @@ from namer.configuration import ImageDownloadType, NamerConfig
 from namer.configuration_utils import default_config, verify_configuration
 from namer.command import make_command, move_command_files, move_to_final_location, set_permissions, write_log_file
 from namer.database import search_file_in_database, write_file_to_database
-from namer.ffmpeg import FFProbeResults
 from namer.fileinfo import FileInfo
 from namer.http import Http
 from namer.metadataapi import get_complete_metadataapi_net_fileinfo, get_image, get_trailer, match, share_hash
@@ -109,7 +108,7 @@ def dir_with_sub_dirs_to_process(dir_to_scan: Path, config: NamerConfig, infos: 
                     process_file(command)
 
 
-def tag_in_place(video: Optional[Path], config: NamerConfig, new_metadata: LookedUpFileInfo, ffprobe_results: Optional[FFProbeResults]):
+def tag_in_place(video: Optional[Path], config: NamerConfig, new_metadata: LookedUpFileInfo):
     """
     Uses ComparisonResults to update a mp4 file's metadata based on a match in
     ComparisonResults.   Expects the first item of list to be the match if there is one.
@@ -123,7 +122,7 @@ def tag_in_place(video: Optional[Path], config: NamerConfig, new_metadata: Looke
                 poster = get_image(new_metadata.poster_url, random, video, config) if new_metadata.poster_url else None
 
             logger.info('Updating file metadata (atoms): {}', video)
-            update_mp4_file(video, new_metadata, poster, ffprobe_results, config)
+            update_mp4_file(video, new_metadata, poster, config)
 
         logger.info('Done tagging file: {}', video)
         if poster is not None and new_metadata.poster_url is not None and new_metadata.poster_url.startswith('http'):
