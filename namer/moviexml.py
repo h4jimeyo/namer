@@ -115,6 +115,7 @@ def write_movie_xml_file(info: LookedUpFileInfo, config: NamerConfig, trailer: O
     art = add_sub_element(doc, root, 'art')
     add_sub_element(doc, art, 'poster', poster.name if poster else info.poster_url)
     add_sub_element(doc, art, 'background', background.name if background else info.background_url)
+    add_sub_element(doc, art, 'fanart', background.name if background else info.background_url)
 
     if config.enable_metadataapi_genres:
         add_all_sub_element(doc, root, 'genre', info.tags)
@@ -142,7 +143,7 @@ def write_movie_xml_file(info: LookedUpFileInfo, config: NamerConfig, trailer: O
             image = performer.image.name if isinstance(performer.image, Path) else performer.image
             add_sub_element(doc, actor, 'image', image)
 
-        add_sub_element(doc, actor, 'thumb')
+        add_sub_element(doc, actor, 'thumb', image)
 
     add_sub_element(doc, root, 'fileinfo')
 
