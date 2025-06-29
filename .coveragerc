@@ -1,6 +1,5 @@
 [run]
 branch = True
-include = namer/*, test/*
 #[report]
 #exclude_lines = pragma: no cover
 #[html]
