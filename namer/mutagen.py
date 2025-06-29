@@ -9,6 +9,7 @@ from loguru import logger
 from mutagen.mp4 import MP4, MP4Cover, MP4StreamInfoError
 
 from namer.configuration import NamerConfig
+from namer.ffmpeg import FFMpeg
 from namer.comparison_results import LookedUpFileInfo
 
 
